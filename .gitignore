@@ -1,0 +1,74 @@
+# === C++ build artifacts ===
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+*.log
+*.d
+*.gcno
+*.gcda
+*.gcov
+*.gch
+*.pch
+
+# === CMake build directory ===
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# === Ninja build system ===
+.ninja_log
+.ninja_deps
+build.ninja
+rules.ninja
+
+# === Vim / Neovim ===
+*.swp
+*.swo
+*.swn
+*.un~
+*.bak
+*~
+.netrwhist
+tags
+
+# === CLion / IDEs ===
+.idea/
+.vscode/
+
+# === Mac OS / Windows ===
+.DS_Store
+Thumbs.db
+
+# === Backup files ===
+*.orig
+*.rej
+
+# === Test artifacts ===
+test-results/
+*.test
+
+# === Generated files ===
+generated/
+gen/
+
+# === Logs and debug ===
+*.trace
+*.stackdump
+
+# === Coverage ===
+coverage/
+*.lcov
+
+# === Sanitizer outputs ===
+leak.*
+san.*
+asan.*
+
