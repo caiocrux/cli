@@ -1,0 +1,43 @@
+name: Build and Package
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cmake debhelper dh-python pkg-config
+
+      - name: Configure and build project
+        run: |
+          mkdir -p build
+          cd build
+          cmake ..
+          make -j$(nproc)
+
+      - name: Build Debian package
+        run: |
+          dpkg-buildpackage -us -uc -b
+      
+      - name: Move .deb package into artifact folder
+        run: |
+          mkdir -p debs
+          mv ../*.deb debs/
+
+      - name: Upload .deb artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: wrcp-tool-deb-package
+          path: debs/*.deb
+          if-no-files-found: warn
