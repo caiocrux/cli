@@ -2,8 +2,10 @@
 
 # CLI Tool
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![CMake](https://github.com/caiocruz/cli-tool/actions/workflows/cmake.yml/badge.svg)](https://github.com/caiocruz/cli-tool/actions/workflows/cmake.yml)
+[![Build Status](https://github.com/caiocrux/cli/actions/workflows/build.yml/badge.svg)](https://github.com/caiocrux/cli/actions/workflows/build.yml)
+[![License](https://img.shields.io/github/license/caiocrux/cli)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/caiocrux/cli)](https://github.com/caiocrux/cli/releases)
+[![GitHub last commit](https://img.shields.io/github/last-commit/caiocrux/cli)](https://github.com/caiocrux/cli)
 
 A modern C++ command-line interface framework built with CMake, featuring modular design and structured logging.
 
