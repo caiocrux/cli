@@ -91,3 +91,24 @@ if (result.count("new-command")) {
     new_command(result["new-command"].as<std::string>());
 }
 ``` 
+
+# Building and Packaging as a Debian .deb
+
+This project supports building and packaging into a Debian package using the standard Debian packaging tools.
+
+## Prerequisites
+
+Make sure you have the necessary packages installed for building Debian packages:
+
+```bash
+sudo apt-get update
+sudo apt-get install build-essential devscripts debhelper dh-make cmake
+``` 
+
+## Building the .deb Package
+
+1. Run the Debian package build command from the project root directory:
+
+``` bash
+dpkg-buildpackage -us -uc
+```

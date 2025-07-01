@@ -107,7 +107,8 @@ debian/*/
 debian/*.debhelper.log
 debian/*.debhelper
 debian/.debhelper/
-debian/wrcp-tool/
+debian/cli-tool/
+debhelper-build-stamp
 
 # Lintian output
 lintian.log
