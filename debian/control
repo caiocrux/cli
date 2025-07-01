@@ -1,0 +1,13 @@
+Source: cli-tool
+Section: utils
+Priority: optional
+Maintainer: Caio Cruz <caio.crux@gmail.com">
+Build-Depends: debhelper-compat (= 13), cmake, g++, make
+Standards-Version: 4.6.0
+
+Package: cli-tool
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description:  Command-Line Tool
+ A CLI tool template example
+

@@ -72,3 +72,55 @@ leak.*
 san.*
 asan.*
 
+# Debian build artifacts
+*.deb
+*.build
+*.buildinfo
+*.changes
+*.dsc
+*.tar.*
+*.orig.tar.*
+*.log
+*.substvars
+*.upload
+*.uploader
+*.build-deps
+
+# dpkg-source backup
+*~
+*.bak
+
+# quilt
+patches/*.log
+patches/.pc/
+.pc/
+
+# dh_auto and other CMake build stuff
+build/
+obj-*/
+debian/tmp/
+debian/files
+debian/*/
+
+# Keep debian/ metadata but ignore temporary package dirs
+!debian/
+debian/*.debhelper.log
+debian/*.debhelper
+debian/.debhelper/
+debian/wrcp-tool/
+
+# Lintian output
+lintian.log
+
+# ccache
+ccache/
+
+# Editor/IDE noise
+*.swp
+*.swo
+*~
+*.kate-swp
+.vscode/
+.idea/
+compile_commands.json
+
